@@ -1,5 +1,10 @@
 # markdown-match-pairs
 
+[![CI](https://github.com/shepherdwind/match-pairs/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/shepherdwind/match-pairs/actions)
+[![NPM version](https://img.shields.io/npm/v/markdown-match-pairs.svg?style=flat)](https://www.npmjs.org/package/markdown-match-pairs)
+[![Coverage Status](https://img.shields.io/coveralls/shepherdwind/match-pairs/master.svg?style=flat)](https://coveralls.io/r/shepherdwind/match-pairs?branch=master)
+
+
 This is a plugin that fixes the logic for bold text in markdown-it.
 
 ## Issue
@@ -8,7 +13,8 @@ By default, markdown-it identifies whether `**` can be closed based on the follo
 
 - If there is a space on the left, then `open = true`
 - If there is a space on the right, then `close = true`
-- If neither side has a space, it checks for special characters such as `+-=` or other language separators like `:` or Chinese semicolons. If these symbols are present, they are treated as spaces.
+- If neither side has a space, it checks for special characters such as `+-=` or other language separators like `:` or Chinese semicolons. If these symbols 
+- are present, they are treated as spaces.
 
 This leads to the following parsing results:
 
