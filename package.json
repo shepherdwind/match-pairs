@@ -1,0 +1,42 @@
+{
+  "name": "markdown-match-pairs",
+  "version": "1.0.0",
+  "description": "A plugin that fixes the logic for bold text in markdown-it",
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "markdown"
+  ],
+  "main": "index.js",
+  "module": "index.mjs",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jest-worker": "^29.7.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-for-inline": "^2.0.1",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-testgen": "^0.1.3",
+    "needle": "^3.0.0",
+    "mocha": "^10.2.0"
+  },
+  "author": "eward.song@gmail.com",
+  "license": "ISC"
+}

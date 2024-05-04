@@ -1,0 +1,22 @@
+.
+**==foo==**
+.
+<p><strong><mark>foo</mark></strong></p>
+.
+
+.
+再来一个**==另外==**的**测试**吧，两个**==加粗==**会怎么样
+.
+<p>再来一个<strong><mark>另外</mark></strong>的<strong>测试</strong>吧，两个<strong><mark>加粗</mark></strong>会怎么样</p>
+.
+
+.
+**测试效果：**中文
+.
+<p><strong>测试效果：</strong>中文</p>
+.
+
+.
+**测试 **测试
+.
+<p>**测试 **测试</p>
