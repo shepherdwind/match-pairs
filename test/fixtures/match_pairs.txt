@@ -20,3 +20,10 @@
 **测试 **测试
 .
 <p>**测试 **测试</p>
+.
+
+.
+abc** foo**bar**bar
+.
+<p>abc** foo<strong>bar</strong>bar</p>
+.

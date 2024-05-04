@@ -25,7 +25,7 @@ The implementation logic is as follows: insert a function before `balance_pairs`
 
 After using this plugin, the above examples will output as follows:
 
-```jsjs
+```js
 render('**==foo==**') === '<p><strong><mark>foo</mark></strong></p>';
 render(' **Chinese:** Chinese ') === ' < p > < strong > Chinese: </ strong > Chinese </ p > ';
 ```

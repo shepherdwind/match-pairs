@@ -9,6 +9,16 @@ const matchIt = (md) => function (state) {
       continue;
     }
 
+    // If this is a close delimiter, and the next character is a space, skip it.
+    if (item.close && !item.open) {
+      const lastToken = state.tokens[item.token + item.length];
+      const content = lastToken ? lastToken.content : "";
+      if (md.utils.isWhiteSpace(content.charCodeAt(0))) {
+        i += item.length - 1;
+        continue;
+      }
+    }
+
     // If this no any previous open emphasis delimiter found, or the previous token is a space or a newline,
     // this must can be a open delimiter.
     let shouldBeOpen = !unpaid.length;
