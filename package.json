@@ -1,6 +1,6 @@
 {
   "name": "markdown-match-pairs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin that fixes the logic for bold text in markdown-it",
   "keywords": [
     "markdown-it-plugin",
@@ -17,6 +17,7 @@
     "test": "c8 --exclude dist --exclude test -r text -r html -r lcov mocha"
   },
   "devDependencies": {
+    "@types/markdown-it": "*",
     "c8": "^8.0.1",
     "jest-worker": "^29.7.0",
     "markdown-it": "^14.1.0",

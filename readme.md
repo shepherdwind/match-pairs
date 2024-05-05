@@ -13,8 +13,7 @@ By default, markdown-it identifies whether `**` can be closed based on the follo
 
 - If there is a space on the left, then `open = true`
 - If there is a space on the right, then `close = true`
-- If neither side has a space, it checks for special characters such as `+-=` or other language separators like `:` or Chinese semicolons. If these symbols 
-- are present, they are treated as spaces.
+- If neither side has a space, it checks for special characters such as `+-=` or other language separators for example Chinese semicolons `：`. If these symbols are present, they are treated as spaces.
 
 This leads to the following parsing results:
 
