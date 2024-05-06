@@ -5,7 +5,11 @@
 [![Coverage Status](https://img.shields.io/coveralls/shepherdwind/match-pairs/master.svg?style=flat)](https://coveralls.io/r/shepherdwind/match-pairs?branch=master)
 
 
-This is a plugin that fixes the logic for bold text in markdown-it.
+This is a plugin that fixes the logic for bold text in [markdown-it](https://github.com/markdown-it/markdown-it).
+
+> This issue has been encountered by many people, and there have been many discussions about it, such as
+> - outline/outline/issues/6683
+> - commonmark/commonmark-spec/issues/650
 
 ## Issue
 
@@ -18,7 +22,7 @@ By default, markdown-it identifies whether `**` can be closed based on the follo
 This leads to the following parsing results:
 
 ```js
-render('**==foo==**') === '<p>**<mark>foo</mark>**</p>';
+render('**==foo==**abc') === '<p>**<mark>foo</mark>**abc</p>';
 render('**中文：**中文') === '<p>**中文：**中文</p>';
 ```
 
@@ -31,8 +35,8 @@ The implementation logic is as follows: insert a function before `balance_pairs`
 After using this plugin, the above examples will output as follows:
 
 ```js
-render('**==foo==**') === '<p><strong><mark>foo</mark></strong></p>';
-render(' **Chinese:** Chinese ') === ' < p > < strong > Chinese: </ strong > Chinese </ p > ';
+render('**==foo==**abc') === '<p><strong><mark>foo</mark></strong>abc</p>';
+render('**中文：**中文') === '<p><strong>中文：</strong>中文</p> ';
 ```
 
 ## Install
@@ -45,12 +49,12 @@ npm install markdown-match-pairs --save
 
 ```js
 var md = require('markdown-it')()
-.use(require('markdown-it-mark'));
+         .use(require('markdown-match-pairs'));
 ```
 
 ## Testing
 
-This plugin has copied all existing test cases from the markdown-it repository to ensure that old test cases pass.
+This plugin has copied **all existing test cases from the markdown-it repository to ensure that old test cases pass**.
 
 ## License
 
