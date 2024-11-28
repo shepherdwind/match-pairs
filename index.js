@@ -5,7 +5,7 @@ const matchIt = (md) => function (state) {
   const unpaid = [];
   for (let i = 0; i < len; i++) {
     const item = delimiters[i];
-    if (item.marker !== 0x2a /* * */) {
+    if (item?.marker !== 0x2a /* * */) {
       continue;
     }
 
@@ -31,7 +31,7 @@ const matchIt = (md) => function (state) {
     if (shouldBeOpen) {
       for (let j = 0; j < item.length; j++) {
         const next = j + i;
-        if (delimiters[next].marker === item.marker) {
+        if (delimiters[next]?.marker === item?.marker) {
           unpaid.push(next);
           delimiters[next].open = true;
         }
@@ -53,7 +53,7 @@ const matchIt = (md) => function (state) {
 
     for (let j = 0; j < item.length; j++) {
       const next = j + i;
-      if (delimiters[next].marker === item.marker) {
+      if (delimiters[next]?.marker === item?.marker) {
         delimiters[next].close = true;
         unpaid.pop();
       }
